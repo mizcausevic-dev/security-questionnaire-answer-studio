@@ -1,41 +1,22 @@
 # Security Questionnaire Answer Studio
 
-Executive answer-studio surface for security questionnaires, trust evidence, response ownership, and cycle-time reduction across the Kinetic Gain executive-intelligence estate.
+Execu
 
-- Live: `https://questionnaire.kineticgain.com/`
-- Repo: `mizcausevic-dev/security-questionnaire-answer-studio`
+---
 
-## What it does
-- maps enterprise questionnaire routes to answer ownership, trust evidence, blockers, and next move
-- keeps questionnaire coverage, response maturity, evidence readiness, and cycle-time pressure in one lane
-- separates reusable answer packs from blocked or weak response areas before the next security or legal review
-- exposes the same questionnaire posture through HTML, JSON APIs, screenshots, and a reproducible CLI
+## Sister tools in the Sales Enablement Stack
 
-## Routes
-- `/`
-- `/questionnaire-queue`
-- `/answer-packs`
-- `/trust-evidence`
-- `/cycle-time`
-- `/verification`
-- `/docs`
+This tool is one of four operator surfaces that compress the cycle time of vendor-diligence response. Use them together for a full buyer-facing readiness flow.
 
-## Local run
-```powershell
-cd security-questionnaire-answer-studio
-npm install
-npm run verify
-npm run prerender
-npm run render:assets
-```
+| Surface | What it does | Subdomain |
+|---|---|---|
+| **Vendor Proof Gap Monitor** | Claim coverage, evidence freshness, benchmark confidence, reuse safety | [proofgap.kineticgain.com](https://proofgap.kineticgain.com/) |
+| **Trust Center Evidence Room** | Evidence packaging, artifact freshness, review readiness, buyer-safe diligence posture | [trust.kineticgain.com](https://trust.kineticgain.com/) |
+| **Security Questionnaire Answer Studio** | Answer library, response ownership, cycle-time reduction, trust-evidence reuse | [questionnaire.kineticgain.com](https://questionnaire.kineticgain.com/) |
+| **RFP Response Assembler** | RFP coverage, differentiation, evidence reuse, submission readiness | [rfp.kineticgain.com](https://rfp.kineticgain.com/) |
 
-## CLI
-```powershell
-npx security-questionnaire-answer-studio fixtures/security-questionnaire-answer-studio.json --format summary
-npx security-questionnaire-answer-studio fixtures/security-questionnaire-answer-studio-clean.json --format json
-```
+All four are seller-side counterparts to the buyer-trust tooling at [kineticgain.com/trust/](https://kineticgain.com/trust/) (8 free browser-only AI diligence tools). Symmetric buyer/seller flow: customers use `/trust/` to draft their diligence asks; vendors use the Sales Enablement Stack to respond.
 
-## Verification
-- synthetic sample data only
-- no live customer questionnaires, security packets, or private diligence documents
-- all routes and packets are generated from the sample export in this repo
+All four hardened to `v1.0-prod` on 2026-05-31. All four dogfooded with [8 real Kinetic Gain product families](https://github.com/mizcausevic-dev/vendor-proof-gap-monitor/blob/main/src/data/sampleVerticalBrief.ts) as the live demo dataset — what you see when you visit the live URLs is what Kinetic Gain itself uses internally.
+
+Part of the [Kinetic Gain portfolio](https://portfolio.kineticgain.com/) (13 named platforms · 60+ v1.0-prod operator surfaces).
